@@ -1,4 +1,4 @@
-const 정답 = "APPLE";
+const 정답 = "METAL";
 
 let index = 0;
 let attempts = 0;
