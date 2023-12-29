@@ -1,4 +1,4 @@
-const 정답 = "METAL";
+const 정답 = "BASIC";
 
 let index = 0;
 let attempts = 0;
@@ -99,6 +99,13 @@ function appStart() {
       index++;
     }
   };
+
+  const questionIcon = document.querySelector("img[alt='question']");
+
+  questionIcon.addEventListener("click", () => {
+    const helpText = "노랑: 다른 위치에 알파벳 존재, 초록: 알파벳 위치 일치"; // 도움말에 표시할 텍스트
+    alert(helpText);
+  });
 
   //여기까지
 
