@@ -74,6 +74,34 @@ function appStart() {
     }
   };
 
+  // 클릭이벤트 추가
+
+  const keyboardColumns = document.querySelectorAll(".keyboard-column");
+
+  keyboardColumns.forEach((column) => {
+    column.addEventListener("click", () => {
+      const key = column.dataset.key;
+      handleKeyClick(key);
+    });
+  });
+
+  const handleKeyClick = (clickedKey) => {
+    const thisBlock = document.querySelector(
+      `.board-column[data-index='${attempts}${index}']`
+    );
+
+    if (index === 5) {
+      if (clickedKey === "ENTER") {
+        handleEnterkey();
+      } else return;
+    } else {
+      thisBlock.innerText = clickedKey;
+      index++;
+    }
+  };
+
+  //여기까지
+
   const startTimer = () => {
     const 시작_시간 = new Date();
 
